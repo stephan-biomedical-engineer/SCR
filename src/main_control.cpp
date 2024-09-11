@@ -65,6 +65,7 @@ void setup() {
 
   /*-----------------------------------------------  Initial state  -----------------------------------------------*/
   digitalWrite(LIGHT, HIGH); // Liga a luz/resistência
+  delay(5000); // Aguarda 5 segundos para o sensor de temperatura estabilizar
 }
   
 void loop() {
@@ -104,7 +105,7 @@ void loop() {
 
   ledcWrite(0, 255*duty_cycle/100); // Ajusta o PWM do cooler
 
-  delay(1000); // Pequeno atraso para a próxima leitura
+  delay(100); // Pequeno atraso para a próxima leitura
 }
 
 /* Functions ----------------------------------------------------------------------------------------------------------*/
